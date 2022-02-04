@@ -1,9 +1,11 @@
 void main() {
+  Stopwatch stopwatch = Stopwatch()..start();
   List<BucketPack> buckets = [];
   List<int> weights = [2, 3, 5, 2, 1, 4, 7, 2, 5, 2, 10, 10, 2, 5, 2, 3, 1, 1];
   int bucketCapacity = 10;
 
   bestFit(buckets: buckets, weights: weights, bucketCapacity: bucketCapacity);
+  print('bestFit() executed in ${stopwatch.elapsedMilliseconds}');
 }
 
 bestFit({
